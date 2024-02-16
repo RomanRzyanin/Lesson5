@@ -12,3 +12,4 @@ C:\Users\79103\OneDrive\Рабочий стол\Geekbrains\01_CSHARP\Lesson5\hom
 C:\Users\79103\OneDrive\Рабочий стол\Geekbrains\01_CSHARP\Lesson5\homework\obj\Debug\net8.0\homework.pdb
 C:\Users\79103\OneDrive\Рабочий стол\Geekbrains\01_CSHARP\Lesson5\homework\obj\Debug\net8.0\homework.genruntimeconfig.cache
 C:\Users\79103\OneDrive\Рабочий стол\Geekbrains\01_CSHARP\Lesson5\homework\obj\Debug\net8.0\ref\homework.dll
+C:\Users\79103\OneDrive\Рабочий стол\Geekbrains\01_CSHARP\Lesson5\homework\obj\Debug\net8.0\homework.sourcelink.json
