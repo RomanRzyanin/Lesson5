@@ -106,13 +106,14 @@ void PrintReverseArray(int[] array, int j)
     PrintReverseArray(array, j - 1);
 }
 
-int[] CreatArray(int size) //Метод ввода элементов массива
+int[] CreatArray(int size, int minRange, int maxRange) //Метод заполнения массива рандомными значениями
 {
     int[] array = new int[size];
     for (int i = 0; i < size; i++)
     {
-        Console.Write($"Enter {i + 1} element of the array: ");
-        array[i] = int.Parse(Console.ReadLine()!);
+        array[i] = new Random().Next(minRange, maxRange + 1);
+        // Console.Write($"Enter {i + 1} element of the array: "); // ввод значений массива в ручную.
+        // array[i] = int.Parse(Console.ReadLine()!);
     }
     return array;
 }
@@ -120,7 +121,7 @@ int[] CreatArray(int size) //Метод ввода элементов масси
 Console.Clear();
 Console.Write($"Enter the size of the array n = ");
 int size = int.Parse(Console.ReadLine()!);
-int[] matrix = CreatArray(size);
+int[] matrix = CreatArray(size, -99, 100);
 Console.WriteLine($"Massive:\t [ {string.Join(", ", matrix)} ]");
 Console.Write("Massive reverse: [ ");
 PrintReverseArray(matrix, size - 1);
