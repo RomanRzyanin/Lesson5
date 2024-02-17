@@ -67,7 +67,33 @@
 /// </summary>
 /// <param name="array"> архив </param>
 /// <param name="j"> индекс последнего элемента архива </param>
-void PrintReverseArray (int[] array, int j)
+//void PrintReverseArray (int[] array, int j)
+// {
+//     //Базовый случай
+//     if (j == 0)
+//     {
+//         Console.Write($"{array[j]} ]");
+//         return;
+//     }
+//     //Рекурсивный случай
+//     Console.Write($"{array[j]}, ");
+//     PrintReverseArray(array, j - 1);
+//    }
+// int[] array = { 2, 3, 6, 33, 57, 0, 45, 667, 89, 5, 11 };
+// int l = array.Length - 1;
+// Console.WriteLine($"Massive:\t [ {string.Join(", ", array)} ]");
+// Console.Write("Massive reverse: [ ");
+// PrintReverseArray(array, l);
+
+
+//task3 v.2
+
+/// <summary>
+/// Метод печатает элементы архива в обратном порядке.
+/// </summary>
+/// <param name="array"> архив </param>
+/// <param name="j"> индекс последнего элемента архива </param>
+void PrintReverseArray(int[] array, int j)
 {
     //Базовый случай
     if (j == 0)
@@ -79,7 +105,22 @@ void PrintReverseArray (int[] array, int j)
     Console.Write($"{array[j]}, ");
     PrintReverseArray(array, j - 1);
 }
-int[] array = { 2, 3, 6, 33, 57, 0, 45, 667, 89, 5, 11 };
-int l = array.Length - 1;
-Console.Write("[ ");
-PrintReverseArray(array, l);
+
+int[] CreatArray(int size) //Метод ввода элементов массива
+{
+    int[] array = new int[size];
+    for (int i = 0; i < size; i++)
+    {
+        Console.Write($"Enter {i + 1} element of the array: ");
+        array[i] = int.Parse(Console.ReadLine()!);
+    }
+    return array;
+}
+
+Console.Clear();
+Console.Write($"Enter the size of the array n = ");
+int size = int.Parse(Console.ReadLine()!);
+int[] matrix = CreatArray(size);
+Console.WriteLine($"Massive:\t [ {string.Join(", ", matrix)} ]");
+Console.Write("Massive reverse: [ ");
+PrintReverseArray(matrix, size - 1);
